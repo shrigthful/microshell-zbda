@@ -36,7 +36,7 @@ int main(int argc , char **argv, char **env)
 	while (argv[i] && argv[i + 1])// ila madarch parameter may dir walo
 	{
 		argv = &argv[i + 1];//kan nskipiw executable name of dakchi li executina. 7na maghan allociw ma walo ghan b9a 5damin ghab argv d execve
-		i = 0;
+		i = 0; //madam argv ghay tbadal 5as i tahaiya trja3 l zero (line li lfo9) 
 		while (argv[i] && strcmp(argv[i], ";") && strcmp(argv[i], "|"))//incremonti 3la l commonde
 			i++;
 		if (i != 0 && strcmp(argv[0], "cd") == 0)//cd ma3ando la input la output hanya dir lo bhal hok
