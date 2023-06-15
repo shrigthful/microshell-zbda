@@ -43,7 +43,7 @@ int main(int argc , char **argv, char **env)
 		{
 			if (i != 2)//5as darori 2 parametrat
 				put_err("error: cd: bad arguments", "");
-			if (chdir(argv[1]) != 0)//ila chdir failat
+			else if (chdir(argv[1]) != 0)//ila chdir failat
 				put_err("error: cd: cannot change directory to ", argv[1]);
 		}
 		else if (i != 0 && ( argv[i] == NULL || strcmp(argv[i], ";") == 0))
